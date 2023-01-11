@@ -10,20 +10,20 @@ footer {
     font-weight: bold;
 }
 
-.container {
+.footer-container {
     max-width: 90%;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.row {
+.footer-row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
 
-.col-md-4 {
+.footer-col-md-4 {
     flex: 0 0 33%;
     max-width: 33%;
     text-align: center;
@@ -45,24 +45,24 @@ li {
     margin-bottom: 10px;
 }
 
-.social-icons li {
+.footer-social-icons li {
     display: inline-block;
     margin-right: 10px;
 }
 
-.social-icons li a {
+.footer-social-icons li a {
     color: #fff;
     font-size: 30px;
 }
 
 @media (max-width: 991px) {
-    .col-md-4 {
+    .footer-col-md-4 {
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
     @media (max-width: 767px) {
-        .col-md-4 {
+        .footer-col-md-4 {
             flex: 0 0 100%;
             max-width: 100%;
         }
