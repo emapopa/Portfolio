@@ -1,21 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+
+
+
 :root {
     /* collors ->  rimary, secondary, tertiary, quaternary, quinary, 
     senary, septenary, octonary, nonary, and denary*/
     --main-color: #201F21;
     --secondary-color: #fff;
     --tertiary-color: #DF00FF;
-   
-  }
+    --qaternary-color: "position"=absolut;
+}
 
-body{
-    overflow-x: hidden;
+body {
+   /* overflow-x: hidden;*/
+    background-color: var(--main-color);
 }
 
 
 
 
 /*Navbar*/
-nav{
+nav {
     height: 6rem;
     width: 100vw;
     background-color: var(--main-color);
@@ -26,25 +31,29 @@ nav{
 }
 
 /*Styling Links*/
-.nav-links{
+.nav-links {
     display: flex;
-    list-style: none; 
+    list-style: none;
     width: 88vw;
     padding: 0 0.7vw;
     justify-content: space-evenly;
     align-items: center;
     text-transform: uppercase;
 }
-.nav-links li a{
+
+.nav-links li a {
     text-decoration: none;
     margin: 0 0.7vw;
 }
+
 .nav-links li a:hover {
     color: var(--tertiary-color);
 }
+
 .nav-links li {
     position: relative;
 }
+
 .nav-links li a::before {
     content: "";
     display: block;
@@ -55,31 +64,35 @@ nav{
     transition: all ease-in-out 250ms;
     margin: 0 0 0 10%;
 }
-.nav-links li a:hover::before{
+
+.nav-links li a:hover::before {
     width: 80%;
 }
 
 
 /*Styling Hamburger Icon*/
-.hamburger div{
+.hamburger div {
     width: 30px;
-    height:3px;
+    height: 3px;
     background: var(--secondary-color);
     margin: 5px;
     transition: all 0.3s ease;
 }
-.hamburger{
+
+.hamburger {
     display: none;
 }
 
 /*Stying for small screens*/
-@media screen and (max-width: 800px){
-    nav{
+@media screen and (max-width: 800px) {
+    nav {
         position: fixed;
         z-index: 3;
+      
     }
-    .hamburger{
-        display:block;
+
+    .hamburger {
+        display: block;
         position: absolute;
         cursor: pointer;
         right: 5%;
@@ -88,7 +101,8 @@ nav{
         z-index: 2;
         transition: all 0.7s ease;
     }
-    .nav-links{
+
+    .nav-links {
         position: fixed;
         background: var(--main-color);
         height: 100vh;
@@ -99,52 +113,147 @@ nav{
         transition: all 1s ease-out;
         pointer-events: none;
     }
-    .nav-links.open{
+
+    .nav-links.open {
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
     }
-    .nav-links li{
+
+    .nav-links li {
         opacity: 0;
     }
-    .nav-links li:nth-child(1){
+
+    .nav-links li:nth-child(1) {
         transition: all 0.5s ease 0.2s;
     }
-    .nav-links li:nth-child(2){
+
+    .nav-links li:nth-child(2) {
         transition: all 0.5s ease 0.4s;
     }
-    .nav-links li:nth-child(3){
+
+    .nav-links li:nth-child(3) {
         transition: all 0.5s ease 0.6s;
     }
-    .nav-links li:nth-child(4){
+
+    .nav-links li:nth-child(4) {
         transition: all 0.5s ease 0.7s;
     }
-    .nav-links li:nth-child(5){
+
+    .nav-links li:nth-child(5) {
         transition: all 0.5s ease 0.8s;
     }
-    .nav-links li:nth-child(6){
+
+    .nav-links li:nth-child(6) {
         transition: all 0.5s ease 0.9s;
         margin: 0;
     }
-    .nav-links li:nth-child(7){
+
+    .nav-links li:nth-child(7) {
         transition: all 0.5s ease 1s;
         margin: 0;
     }
-    li.fade{
+
+    li.fade {
         opacity: 1;
     }
 }
+
 /*Animating Hamburger Icon on Click*/
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
-.toggle .line2{
+
+.toggle .line2 {
     transition: all 0.7s ease;
-    width:0;
+    width: 0;
 }
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
+
+
+
+
+.ball {
+    animation: float 3.5s ease-in-out infinite;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 75% 30%, white 5px,
+            #3b0955 8%, #700e77 60%, #a810bf 100%);
+    box-shadow: inset 0 0 20px #3b0955  inset 10px 0 46px #3b0955 , inset 88px 0px 60px #a810bf, inset -20px -60px 100px #fde9ea, inset 0 50px 140px #fde9ea, inset 0 0 90px #fff;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-80px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.shadow {
+    background: #DB9EDF;
+    width: 150px;
+    height: 40px;
+    top: 70%;
+    animation: expand 4s infinite;
+    position: absolute;
+    border-radius: 50%;
+}
+
+@keyframes expand {
+
+    0%,
+    100% {
+        transform: scale(0.5);
+    }
+
+    50% {
+
+        transform: scale(1);
+    }
+}
+
+.content-main{
+    padding-right: 10%;
+    text-align: center;
+    font-family: 'Moon Dance', cursive;
+    font-size: 4em;
+    color: var(--secondary-color);
+    font-weight: 900;
+    font-stretch: expanded;
+    transform: rotate(-13deg)
+}
+
+
+
+
+
+
+.main-header {
+  
+   padding: 17%;
+}
+.main-header-row{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    
+    
+}
+
+
 
 
 
@@ -154,13 +263,14 @@ footer {
     background-color: var(--main-color);
     color: var(--secondary-color);
     padding: 30px 0;
+    margin-top: 10%;
     font-family: 'Montserrat', monospace;
     font-weight: bold;
 
-        position: absolute;
-        bottom: 0;
-                 
-      
+    position: absolute;
+    bottom: 0;
+
+
 }
 
 .footer-container {
@@ -214,10 +324,11 @@ li {
         max-width: 50%;
     }
 }
-    @media (max-width: 767px) {
-        .footer-col-md-4 {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
 
+@media (max-width: 767px) {
+    .footer-col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
+
+}
