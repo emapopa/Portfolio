@@ -2,9 +2,19 @@ body {
     background-color: #131315;
 }
 
+:root {
+    /* collors ->  rimary, secondary, tertiary, quaternary, quinary, 
+    senary, septenary, octonary, nonary, and denary*/
+    --main-color: #201F21;
+    --secondary-color: #fff;
+    --tertiary-color: #DF00FF;
+   
+  }
+
+/* footer */
 footer {
-    background-color: #201F21;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
     padding: 30px 0;
     font-family: 'Montserrat', monospace;
     font-weight: bold;
@@ -31,7 +41,7 @@ footer {
 
 h3 {
     margin-bottom: 15px;
-    color: #DF00FF;
+    color: var(--tertiary-color);
     ;
 }
 
@@ -51,7 +61,7 @@ li {
 }
 
 .footer-social-icons li a {
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 30px;
 }
 
