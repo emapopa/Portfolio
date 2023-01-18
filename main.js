@@ -15,8 +15,8 @@ hamburger.addEventListener('click', ()=>{
 
 // set up text to print, each item in array is new line
 let aText = new Array(
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", 
-    "Quia, asperiores maxime aut aliquid architecto reiciendis accusamus v"
+    "Hello world, my name is Emanuel ", 
+    "Im a Ux and Ui designer with a background in frontend "
     );
     let iSpeed = 100; // time delay of print out
     let iIndex = 0; // start printing array at this posision

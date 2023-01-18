@@ -208,7 +208,7 @@ nav {
     background: #DB9EDF;
     width: 150px;
     height: 40px;
-    top: 70%;
+    top: 60%;
     animation: expand 4s infinite;
     position: absolute;
     border-radius: 50%;
@@ -382,6 +382,7 @@ li {
   .resume {
     width: 800px;
     display: flex;
+    padding: 20%;
 
    
   }
