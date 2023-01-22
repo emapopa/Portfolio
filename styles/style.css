@@ -180,7 +180,7 @@ nav {
 
 
 .ball {
-    animation: float 3.5s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -225,6 +225,9 @@ nav {
 
         transform: scale(1);
     }
+}
+.animation-main{
+  margin-top: 50px;
 }
 
 .content-main{
@@ -588,35 +591,78 @@ li {
   }
   
 
-  /*portfolio */
-  .port-content{
-    display: flex;
-    padding: 30%;
-  }
 
-  section.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  section.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  section.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  section.desc {
-    padding: 15px;
-    text-align: center;
-  }
-
-
-  @media only screen and (min-width: 768px) and (max-width: 979px){
+  @media only screen and (min-width: 600px) and (max-width: 979px){
+    .content-main{
     
+  
+      font-size: 3em;
+   
+      font-weight: 600;
+    
+  }
+  .animation-main{
+    margin-top: 70px;
+  }
+  .ball {
+    
+    height: 100px;
+    width: 100px;
+   
+}
+.shadow {
+ 
+  width: 100px;
+  height: 30px;
+  top: 50%;
+ 
+}
+.resume{
+  display: flex;
+  flex-direction: column;
+}
+.resume .resume_right{
+  width: 400px;
+}
+.resume .resume_left{
+  width: 450px;
+}
+    
+  }
+
+
+  @media only screen and (min-width: 300px) and (max-width: 600px){
+    .content-main{
+      margin-top: 50px;
+      font-size: 2em;
+      font-weight: 400;
+    
+  }
+  .animation-main{
+    margin-top: 8rem;
+  }
+  .ball {
+    
+    height: 100px;
+    width: 100px;
+   
+}
+.shadow {
+ 
+  width: 100px;
+  height: 30px;
+  top: 70%;
+}
+  .resume{
+    display: flex;
+    flex-direction: column;
+  }
+  .resume .resume_right{
+    width: 300px;
+  }
+  .resume .resume_left{
+    width: 350px;
+  }
+
     
   }
