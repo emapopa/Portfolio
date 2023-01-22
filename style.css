@@ -261,7 +261,7 @@ nav {
 
 .main-header::before {   
     content: "";
-    background-image: url("/images/ux.jpg");
+    background-image: url("ux.jpg");
     background-color: #262527;
     background-size: cover;
     position: absolute;
